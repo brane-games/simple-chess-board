@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://iiqrr3gmw3pd"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_fmrna"]
+[ext_resource type="PackedScene" uid="uid://df5nkfu6260wj" path="res://board/board_control.tscn" id="1_tccni"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ltb6v"]
+bg_color = Color(0.266667, 0.160784, 0.219608, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.266667, 0.160784, 0.219608, 1)
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fmrna")
+
+[node name="BoardControl" parent="." instance=ExtResource("1_tccni")]
+layout_mode = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_ltb6v")
+square_size = 56.0
+background_color = Color(0.266667, 0.160784, 0.219608, 1)
+white_color = Color(0.94902, 0.827451, 0.847059, 1)
+black_color = Color(0.431373, 0.294118, 0.305882, 1)

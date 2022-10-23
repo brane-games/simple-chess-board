@@ -1,0 +1,1185 @@
+[gd_scene load_steps=5 format=3 uid="uid://df5nkfu6260wj"]
+
+[ext_resource type="Script" path="res://board/board_control.gd" id="1_klbkn"]
+[ext_resource type="Texture2D" uid="uid://do1lg3hu4q4fw" path="res://board/pieces_svgs/black_king.svg" id="2_2yyi2"]
+
+[sub_resource type="Theme" id="Theme_x7xa3"]
+GridContainer/constants/h_separation = 2
+GridContainer/constants/v_separation = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yvhmq"]
+bg_color = Color(0.4, 0.52549, 0.564706, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.4, 0.52549, 0.564706, 1)
+
+[node name="BoardControl" type="PanelContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.0
+offset_top = -17.5
+offset_right = 17.0
+offset_bottom = 17.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_x7xa3")
+theme_override_styles/panel = SubResource("StyleBoxFlat_yvhmq")
+script = ExtResource("1_klbkn")
+square_size = 36.0
+background_color = Color(0.4, 0.52549, 0.564706, 1)
+white_color = Color(0.709804, 0.823529, 0.866667, 1)
+black_color = Color(0.14902, 0.298039, 0.415686, 1)
+highlight_color = Color(1, 0.517647, 0.768627, 1)
+border_size = 8.0
+spacing_size = 0.0
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 296.0
+offset_bottom = 296.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="ColorRect" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_right = 36.0
+offset_bottom = 36.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect2" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 36.0
+offset_right = 72.0
+offset_bottom = 36.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect2"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect3" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 72.0
+offset_right = 108.0
+offset_bottom = 36.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect3"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect4" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 108.0
+offset_right = 144.0
+offset_bottom = 36.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect4"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect5" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 144.0
+offset_right = 180.0
+offset_bottom = 36.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect5"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect6" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 180.0
+offset_right = 216.0
+offset_bottom = 36.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect6"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect7" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 216.0
+offset_right = 252.0
+offset_bottom = 36.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect7"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect8" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 252.0
+offset_right = 288.0
+offset_bottom = 36.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect8"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect9" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_top = 36.0
+offset_right = 36.0
+offset_bottom = 72.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect9"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect10" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 36.0
+offset_top = 36.0
+offset_right = 72.0
+offset_bottom = 72.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect10"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect11" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 72.0
+offset_top = 36.0
+offset_right = 108.0
+offset_bottom = 72.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect11"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect12" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 108.0
+offset_top = 36.0
+offset_right = 144.0
+offset_bottom = 72.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect12"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect13" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 144.0
+offset_top = 36.0
+offset_right = 180.0
+offset_bottom = 72.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect13"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect14" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 180.0
+offset_top = 36.0
+offset_right = 216.0
+offset_bottom = 72.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect14"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect15" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 216.0
+offset_top = 36.0
+offset_right = 252.0
+offset_bottom = 72.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect15"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect16" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 252.0
+offset_top = 36.0
+offset_right = 288.0
+offset_bottom = 72.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect16"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect17" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_top = 72.0
+offset_right = 36.0
+offset_bottom = 108.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect17"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect18" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 36.0
+offset_top = 72.0
+offset_right = 72.0
+offset_bottom = 108.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect18"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect19" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 72.0
+offset_top = 72.0
+offset_right = 108.0
+offset_bottom = 108.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect19"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect20" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 108.0
+offset_top = 72.0
+offset_right = 144.0
+offset_bottom = 108.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect20"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect21" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 144.0
+offset_top = 72.0
+offset_right = 180.0
+offset_bottom = 108.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect21"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect22" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 180.0
+offset_top = 72.0
+offset_right = 216.0
+offset_bottom = 108.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect22"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect23" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 216.0
+offset_top = 72.0
+offset_right = 252.0
+offset_bottom = 108.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect23"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect24" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 252.0
+offset_top = 72.0
+offset_right = 288.0
+offset_bottom = 108.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect24"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect25" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_top = 108.0
+offset_right = 36.0
+offset_bottom = 144.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect25"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect26" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 36.0
+offset_top = 108.0
+offset_right = 72.0
+offset_bottom = 144.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect26"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect27" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 72.0
+offset_top = 108.0
+offset_right = 108.0
+offset_bottom = 144.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect27"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect28" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 108.0
+offset_top = 108.0
+offset_right = 144.0
+offset_bottom = 144.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect28"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect29" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 144.0
+offset_top = 108.0
+offset_right = 180.0
+offset_bottom = 144.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect29"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect30" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 180.0
+offset_top = 108.0
+offset_right = 216.0
+offset_bottom = 144.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect30"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect31" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 216.0
+offset_top = 108.0
+offset_right = 252.0
+offset_bottom = 144.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect31"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect32" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 252.0
+offset_top = 108.0
+offset_right = 288.0
+offset_bottom = 144.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect32"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect33" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_top = 144.0
+offset_right = 36.0
+offset_bottom = 180.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect33"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect34" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 36.0
+offset_top = 144.0
+offset_right = 72.0
+offset_bottom = 180.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect34"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect35" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 72.0
+offset_top = 144.0
+offset_right = 108.0
+offset_bottom = 180.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect35"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect36" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 108.0
+offset_top = 144.0
+offset_right = 144.0
+offset_bottom = 180.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect36"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect37" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 144.0
+offset_top = 144.0
+offset_right = 180.0
+offset_bottom = 180.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect37"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect38" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 180.0
+offset_top = 144.0
+offset_right = 216.0
+offset_bottom = 180.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect38"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect39" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 216.0
+offset_top = 144.0
+offset_right = 252.0
+offset_bottom = 180.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect39"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect40" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 252.0
+offset_top = 144.0
+offset_right = 288.0
+offset_bottom = 180.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect40"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect41" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_top = 180.0
+offset_right = 36.0
+offset_bottom = 216.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect41"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect42" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 36.0
+offset_top = 180.0
+offset_right = 72.0
+offset_bottom = 216.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect42"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect43" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 72.0
+offset_top = 180.0
+offset_right = 108.0
+offset_bottom = 216.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect43"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect44" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 108.0
+offset_top = 180.0
+offset_right = 144.0
+offset_bottom = 216.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect44"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect45" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 144.0
+offset_top = 180.0
+offset_right = 180.0
+offset_bottom = 216.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect45"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect46" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 180.0
+offset_top = 180.0
+offset_right = 216.0
+offset_bottom = 216.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect46"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect47" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 216.0
+offset_top = 180.0
+offset_right = 252.0
+offset_bottom = 216.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect47"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect48" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 252.0
+offset_top = 180.0
+offset_right = 288.0
+offset_bottom = 216.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect48"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect49" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_top = 216.0
+offset_right = 36.0
+offset_bottom = 252.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect49"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect50" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 36.0
+offset_top = 216.0
+offset_right = 72.0
+offset_bottom = 252.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect50"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect51" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 72.0
+offset_top = 216.0
+offset_right = 108.0
+offset_bottom = 252.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect51"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect52" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 108.0
+offset_top = 216.0
+offset_right = 144.0
+offset_bottom = 252.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect52"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect53" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 144.0
+offset_top = 216.0
+offset_right = 180.0
+offset_bottom = 252.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect53"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect54" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 180.0
+offset_top = 216.0
+offset_right = 216.0
+offset_bottom = 252.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect54"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect55" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 216.0
+offset_top = 216.0
+offset_right = 252.0
+offset_bottom = 252.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect55"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect56" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 252.0
+offset_top = 216.0
+offset_right = 288.0
+offset_bottom = 252.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect56"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect57" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_top = 252.0
+offset_right = 36.0
+offset_bottom = 288.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect57"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect58" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 36.0
+offset_top = 252.0
+offset_right = 72.0
+offset_bottom = 288.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect58"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect59" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 72.0
+offset_top = 252.0
+offset_right = 108.0
+offset_bottom = 288.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect59"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect60" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 108.0
+offset_top = 252.0
+offset_right = 144.0
+offset_bottom = 288.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect60"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect61" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 144.0
+offset_top = 252.0
+offset_right = 180.0
+offset_bottom = 288.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect61"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect62" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 180.0
+offset_top = 252.0
+offset_right = 216.0
+offset_bottom = 288.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect62"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect63" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 216.0
+offset_top = 252.0
+offset_right = 252.0
+offset_bottom = 288.0
+color = Color(0.14902, 0.298039, 0.415686, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect63"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorRect64" type="ColorRect" parent="GridContainer"]
+custom_minimum_size = Vector2i(36, 36)
+offset_left = 252.0
+offset_top = 252.0
+offset_right = 288.0
+offset_bottom = 288.0
+color = Color(0.709804, 0.823529, 0.866667, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ColorRect64"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2yyi2")
+ignore_texture_size = true
+stretch_mode = 4
