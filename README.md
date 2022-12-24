@@ -1,3 +1,6 @@
+This project was a starting point for my chess game Master of Chess. Check it out on steam here:
+https://store.steampowered.com/app/2248900/Master_of_Chess/
+
 # Simple Chess Board
 
 A Godot 4.0 Chess board component.
