@@ -2,9 +2,8 @@ This project was a starting point for my chess game Master of Chess. Check it ou
 https://store.steampowered.com/app/2248900/Master_of_Chess/
 
 <p align="center">
-  <img src="[http://some_place.com/image.png](https://user-images.githubusercontent.com/116460113/209447704-7da9c4da-1aed-49b1-aadf-72ed169cd706.png)" />
+  <img src="https://user-images.githubusercontent.com/116460113/209447758-bbb306e4-9889-4a7d-acc6-51963b5dc437.png" />
 </p>
-
 
 # Simple Chess Board
 
